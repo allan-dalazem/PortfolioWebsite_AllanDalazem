@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+}
+
+body{
+    background-color: #FFFFFF;
+}
+
+header{
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+
+    border-bottom: 2px solid #D9EAF7;
+
+    background-color: #1E3A5F;
+}
+
+h1, h2, p{
+    font-family: "Roboto Mono", monospace;
+}
+
+.curriculum-container{
+    display: flex;
+    flex-direction: column;
+}
