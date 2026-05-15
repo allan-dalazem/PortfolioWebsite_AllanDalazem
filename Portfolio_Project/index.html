@@ -4,55 +4,203 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         <link rel="stylesheet" href="css/style.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 
         <title>Portfólio - Home</title>
     </head>
     <body>
         <header>
             <h1>Allan Dalazem</h1>
+            <p>DESENVOLVEDOR BACK-END</p>
         </header>
 
-        <section>
-            <p>Sou apaixonado por tecnologia e busco uma oportunidade profissional na área. Atualmente, estou cursando o técnico em Programação de Jogos Digitais no Instituto Federal do Paraná. Sou proativo e gosto de ajudar outras pessoas.</p>
-        </section>
+        <nav>
+            <button class="sidebar-open" onClick="openNav()"><i class="bi bi-list"></i></button>
+        </nav>
 
-        <section class="curriculum-container">
-            <div>
-                <h2>Formação Acadêmica</h2>
+        <div id="mySideBar" class="sidebar">
+            <a href="javascript:void(0)" class="sidebar-close" onClick="closeNav()">x</a>
 
-                <p>Curso: Programação de Jogos Digitais</p>
-                <p>Instituição: Instituto Federal do Paraná - Campus Curitiba</p>
-                <p>Período: Março/2023 - Dezembro/2026</p>
-                <p>Competências: Programação em C, C++, C# | Unity 2D/3D | Blender | Game Design | Versionamento com GitHub | Lógica Computacional | Trabalho em Equipe.</p>
+            <div class="sidebar-content">
+                <a href="#infos">Informações</a>
+                <a href="#formacao">Formação Acadêmica</a>
+                <a href="#cursos">Cursos Complementares</a>
+                <a href="#idiomas">Idiomas</a>
+                <a href="#projetos">Projetos</a>
             </div>
+        </div>
 
+        <div id="main">
+            <section class="container">
+                <div class="container-item">
+                    <h2>Informações</h2>
+
+                    <div id="infos" class="about-me">
+                        <img src="images/AllanDalazem.jpeg" alt="Allan Dalazem">
+                        <div>
+                            <p>
+                                <details>
+                                    <summary><b>Sobre Mim</b></summary>
+
+                                    Estudante de Programação de Jogos Digitais no IFPR, sou apaixonado por resolver problemas através da tecnologia. 
+                                    Sou proativo, focado em resultados e entusiasta do trabalho colaborativo.
+                                </details>
+                                
+                                <br>
+
+                                <details>
+                                    <summary><b>Áreas de Atuação</b></summary>
+                                    
+                                    Meu foco principal é o Desenvolvimento Back-end, com interesse em arquitetura de sistemas, APIs e bancos de dados. 
+                                    Busco criar soluções lógicas, eficientes e escaláveis.
+                                </details>
+
+                                <br>
+
+                                <details>
+                                    <summary><b>Objetivo Profissional</b></summary>
+                                    
+                                    Busco minha primeira oportunidade no mercado tech para aplicar meus conhecimentos acadêmicos, colaborar com equipes experientes e evoluir como desenvolvedor em cenários reais.
+                                </details>
+
+                                <br>
+
+                                <details>
+                                    <summary><b>Dados Pessoais</b></summary>
+
+                                    Nascimento: 05/11/2008
+                                    <br>
+                                    E-mail: allan.dalazem2008@gmail.com
+                                    <br>
+                                    Telefone: +55 (41) 99281-0980
+                                </details>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container">
+                <div id="formacao" class="container-item">
+                    <h2>Formação Acadêmica</h2>
+
+                    <p>Curso: Programação de Jogos Digitais</p>
+                    <p>Instituição: Instituto Federal do Paraná - Campus Curitiba</p>
+                    <p>Período: Março/2023 - Dezembro/2026</p>
+                </div>
+
+                <div id="cursos" class="container-item">
+                    <h2>Cursos Complementares</h2>
+
+                    <p>Curso: Análise de Dados</p>
+                    <p>Instituição: Tech.Já, JA Paraná e Coursera</p>
+                    <p>Período: Setembro/2025 - Dezembro/2025</p>
+
+                    <br>
+
+                    <p>Curso: Preparatório para Colégios Militares</p>
+                    <p>Instituição: Genius</p>
+                    <p>Período: Março/2017 - Dezembro/2018</p>
+                </div>
+
+                <div id="competencias" class="container-item">
+                    <h2>Competências</h2>
+
+                    <b>Hard Skills</b>
+                    <p>Linguagens: C | C++ | C# | SQL</p>
+                    <p>Softwares: Unity 2D/3D | Blender | GitHub | Pacote Office</p>
+
+                    <br>
+
+                    <b>Soft Skills</b>
+                    <p>Lógica Computacional | Trabalho em Equipe | Análise de Dados | Raciocínio Lógico e Matemático | Interpretação de Textos | Conhecimentos em Gramática e Redação.</p>
+                </div>
+
+                <div id="idiomas" class="container-item">
+                    <h2>Idiomas</h2>
+
+                    <p>Português: nativo</p>
+                    <p>Inglês: A2 (em curso)</p>
+                    <p>Espanhol: A1 (em curso)</p>
+                </div> 
+
+                <div id="projetos" class="container-item">
+                    <h2>Projetos</h2>
+
+                    <div class="grid-projects">
+                        <div class="card-project">
+                            <h3>U = R · i</h3>
+                            <p>TCC do Técnico em Programação de Jogos Digitais.</p>
+
+                            <div class="tags-projects">
+                                <span class="tag-project">Unity 2D</span>
+                                <span class="tag-project">C#</span>
+                            </div>
+
+                            <br><br>
+
+                            <a href="" class="button-project"><b>Baixar</b></a>
+                        </div>
+
+                        <div class="card-project">
+                            <h3>The Last Of Cheese</h3>
+                            <p>Um jogo sobre ratos.</p>
+
+                            <div class="tags-projects">
+                                <span class="tag-project">Unity 2D</span>
+                                <span class="tag-project">C#</span>
+                            </div>
+
+                            <br><br>
+
+                            <a href="" class="button-project"><b>Baixar</b></a>
+                        </div>
+
+                        <div class="card-project">
+                            <h3>The Maze Game</h3>
+                            <p>Jogo de labirinto.</p>
+
+                            <div class="tags-projects">
+                                <span class="tag-project">C++</span>
+                            </div>
+
+                            <br><br>
+
+                            <a href="" class="button-project"><b>Baixar</b></a>
+                        </div>
+
+                        <div class="card-project">
+                            <h3>GunBound</h3>
+                            <p>Baseado no jogo GunBound (2003)</p>
+
+                            <div class="tags-projects">
+                                <span class="tag-project">C++</span>
+                            </div>
+
+                            <br><br>
+
+                            <a href="" class="button-project"><b>Baixar</b></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 - Todos os direitos reservados</p>
+            
             <div>
-                <h2>Cursos Complementares</h2>
-
-                <h3>Análise de Dados</h3>
-                <p>Instituição: Tech.Já, JA Paraná e Coursera</p>
-                <p>Período: Setembro/2025 - Dezembro/2025</p>
-                <p>Competências: Análise de Dados | Planilhas | Banco de Dados | SQL. </p>
-
-                <h3>Preparatório para Colégios Militares</h3>
-                <p>Instituição: Genius</p>
-                <p>Período: Março/2017 - Dezembro/2018</p>
-                <p>Competências: Raciocínio Lógico e Matemático | Interpretação de Textos | Conhecimentos em Gramática e Redação.</p>
+                <a target="blank" href="https://github.com/allan-dalazem" alt="GitHub"><i class="bi bi-github icon-style"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/allan-dalazem/" alt="LinkedIn"><i class="bi bi-linkedin icon-style"></i></a>
             </div>
+            
+        </footer>
 
-            <div>
-                <h2>Idiomas</h2>
-
-                <p>Português: nativo</p>
-                <p>Inglês: A2 (em curso)</p>
-                <p>Espanhol: A1 (em curso)</p>
-            </div>
-        </section>
-        
+        <script src="javascript/script.js"></script>
     </body>
 </html>
