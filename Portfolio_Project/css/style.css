@@ -178,6 +178,10 @@ h1, h2, h3{
     text-align: justify;
 }
 
+.about-me summary{
+    cursor: pointer;
+}
+
 .grid-projects{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
