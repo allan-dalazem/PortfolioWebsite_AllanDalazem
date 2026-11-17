@@ -1,206 +1,427 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Allan Dalazem | Systems & Backend Engineer</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="css/style.css">
+    <div class="top-glow-bar"></div>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-
-        <title>Portfólio - Allan Dalazem</title>
-    </head>
-    <body>
-        <header>
-            <h1>Allan Dalazem</h1>
-            <p>DESENVOLVEDOR BACK-END</p>
-        </header>
-
-        <nav>
-            <button class="sidebar-open" onClick="openNav()"><i class="bi bi-list"></i></button>
-        </nav>
-
-        <div id="mySideBar" class="sidebar">
-            <a href="javascript:void(0)" class="sidebar-close" onClick="closeNav()">x</a>
-
-            <div class="sidebar-content">
-                <a href="#infos">Informações</a>
-                <a href="#formacao">Formação Acadêmica</a>
-                <a href="#cursos">Cursos Complementares</a>
-                <a href="#idiomas">Idiomas</a>
-                <a href="#projetos">Projetos</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">AD<span class="dot">.</span></a>
+            <div class="nav-links">
+                <a href="#about">Sobre</a>
+                <a href="#stack">Ecossistema</a>
+                <a href="#projects">Projetos</a>
+                <a href="#education">Formação</a>
             </div>
+            <button class="menu-toggle" aria-label="Abrir Menu" onClick="toggleMenu()">
+                <i class="bi bi-list"></i>
+            </button>
         </div>
+    </nav>
 
-        <div id="main">
-            <section class="container">
-                <div class="container-item">
-                    <h2>Informações</h2>
+    <div id="mobileMenu" class="mobile-menu">
+        <button class="menu-close" onClick="toggleMenu()">&times;</button>
+        <div class="mobile-menu-links">
+            <a href="#about" onClick="toggleMenu()">Sobre</a>
+            <a href="#stack" onClick="toggleMenu()">Ecossistema</a>
+            <a href="#projects" onClick="toggleMenu()">Projetos</a>
+            <a href="#education" onClick="toggleMenu()">Formação</a>
+        </div>
+    </div>
 
-                    <div id="infos" class="about-me">
-                        <img src="images/AllanDalazem.jpeg" alt="Allan Dalazem">
+    <main id="main-content">
+        
+        <section class="hero-section">
+            <div class="hero-badge">
+                <span class="badge-dot"></span> Disponível para novas oportunidades
+            </div>
+            <h1 class="hero-title">
+                Building scalable systems <br>
+                <span class="gradient-text">with absolute precision.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Olá, eu sou o <strong>Allan Dalazem</strong>. Especializando-me em engenharia de sistemas robustos, arquitetura de software eficiente e desenvolvimento back-end escalável.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                <a href="#about" class="btn btn-secondary">Conhecer Perfil</a>
+            </div>
+        </section>
+
+        <section id="about" class="section-container">
+            <div class="bento-grid">
+                
+                <div class="bento-card profile-card">
+                    <div class="profile-header">
+                        <img src="images/AllanDalazem.jpeg" alt="Allan Dalazem" class="profile-img">
                         <div>
-                            <p>
-                                <details>
-                                    <summary><b>Sobre Mim</b></summary>
+                            <h3>Allan Dalazem</h3>
+                            <p class="title-tag">Systems & Backend Specialist</p>
+                        </div>
+                    </div>
+                    <div class="profile-bio">
+                        <p>Desenvolvedor focado em projetar soluções lógicas e de alta performance. Com forte base matemática e domínio de linguagens tipadas, foco em construir a fundação invisível e indestrutível de aplicações modernas: APIs escaláveis, segurança de dados e otimização de baixo nível.</p>
+                    </div>
+                </div>
 
-                                    Estudante de Programação de Jogos Digitais no IFPR, sou apaixonado por resolver problemas através da tecnologia. 
-                                    Sou proativo, focado em resultados e entusiasta do trabalho colaborativo.
-                                </details>
-                                
-                                <br>
-
-                                <details>
-                                    <summary><b>Áreas de Atuação</b></summary>
-                                    
-                                    Meu foco principal é o Desenvolvimento Back-end, com interesse em arquitetura de sistemas, APIs e bancos de dados. 
-                                    Busco criar soluções lógicas, eficientes e escaláveis.
-                                </details>
-
-                                <br>
-
-                                <details>
-                                    <summary><b>Objetivo Profissional</b></summary>
-                                    
-                                    Busco minha primeira oportunidade no mercado tech para aplicar meus conhecimentos acadêmicos, colaborar com equipes experientes e evoluir como desenvolvedor em cenários reais.
-                                </details>
-
-                                <br>
-
-                                <details>
-                                    <summary><b>Dados Pessoais</b></summary>
-
-                                    Nascimento: 05/11/2008
-                                    <br>
-                                    E-mail: allan.dalazem2008@gmail.com
-                                    <br>
-                                    Telefone: +55 (41) 99281-0980
-                                </details>
-                            </p>
+                <div class="bento-card contact-card">
+                    <h4 class="card-label">Conectar via canais oficiais</h4>
+                    <div class="contact-methods">
+                        <a href="mailto:allan.dalazem2008@gmail.com" class="contact-item">
+                            <i class="bi bi-envelope"></i>
+                            <span>allan.dalazem2008@gmail.com</span>
+                        </a>
+                        <a href="tel:+5541992810980" class="contact-item">
+                            <i class="bi bi-telephone"></i>
+                            <span>+55 (41) 99281-0980</span>
+                        </a>
+                        <div class="meta-info">
+                            <span><i class="bi bi-calendar3"></i> Born: 2008</span>
+                            <span><i class="bi bi-geo-alt"></i> Curitiba, Brasil</span>
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <section class="container">
-                <div id="formacao" class="container-item">
-                    <h2>Formação Acadêmica</h2>
+            </div>
+        </section>
 
-                    <p>Ensino médio integrado ao técnico em Programação de Jogos Digitais</p>
-                    <p>Instituto Federal do Paraná - Campus Curitiba</p>
-                    <p>Período: Março/2023 - Dezembro/2026</p>
-                </div>
-
-                <div id="cursos" class="container-item">
-                    <h2>Cursos Complementares</h2>
-
-                    <p>Análise de Dados</p>
-                    <p>Instituição: Tech.Já, JA Paraná e Coursera</p>
-                    <p>Período: Setembro/2025 - Dezembro/2025</p>
-
-                    <br>
-
-                    <p>Preparatório para Colégios Militares</p>
-                    <p>Instituição: Genius</p>  
-                    <p>Período: Março/2017 - Dezembro/2018</p>
-                </div>
-
-                <div id="competencias" class="container-item">
-                    <h2>Competências</h2>
-
-                    <b>Hard Skills</b>
-                    <p>Linguagens: C | C++ | C# | SQL | HTML | CSS | JavaScript</p>
-                    <p>Softwares: Unity 2D/3D | Blender | GitHub | Inkscape | OpenToonz | Pacote Office</p>
-
-                    <br>
-
-                    <b>Soft Skills</b>
-                    <p>Lógica Computacional | Trabalho em Equipe | Análise de Dados | Raciocínio Lógico e Matemático | Interpretação de Textos | Conhecimentos em Gramática e Redação.</p>
-                </div>
-
-                <div id="idiomas" class="container-item">
-                    <h2>Idiomas</h2>
-
-                    <p>Português: nativo</p>
-                    <p>Inglês: A2 (em curso)</p>
-                    <p>Espanhol: A1 (em curso)</p>
-                </div> 
-
-                <div id="projetos" class="container-item">
-                    <h2>Projetos</h2>
-
-                    <div class="grid-projects">
-                        <div class="card-project">
-                            <h3>U = R · i</h3>
-                            <p>TCC do Técnico em Programação de Jogos Digitais.</p>
-
-                            <div class="tags-projects">
-                                <span class="tag-project">Unity 2D</span>
-                                <span class="tag-project">C#</span>
-                            </div>
-
-                            <br><br>
-
-                            <a href="" class="button-project"><b>Baixar</b></a>
-                        </div>
-
-                        <div class="card-project">
-                            <h3>The Last Of Cheese</h3>
-                            <p>Um jogo sobre ratos.</p>
-
-                            <div class="tags-projects">
-                                <span class="tag-project">Unity 2D</span>
-                                <span class="tag-project">C#</span>
-                            </div>
-
-                            <br><br>
-
-                            <a href="" class="button-project"><b>Baixar</b></a>
-                        </div>
-
-                        <div class="card-project">
-                            <h3>The Maze Game</h3>
-                            <p>Jogo de labirinto.</p>
-
-                            <div class="tags-projects">
-                                <span class="tag-project">C++</span>
-                            </div>
-
-                            <br><br>
-
-                            <a href="" class="button-project"><b>Baixar</b></a>
-                        </div>
-
-                        <div class="card-project">
-                            <h3>GunBound</h3>
-                            <p>Baseado no jogo GunBound (2003)</p>
-
-                            <div class="tags-projects">
-                                <span class="tag-project">C++</span>
-                            </div>
-
-                            <br><br>
-
-                            <a href="" class="button-project"><b>Baixar</b></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <footer>
-            <p>&copy; 2026 Allan Dalazem - Todos os direitos reservados</p>
-            
-            <div>
-                <a target="blank" href="https://github.com/allan-dalazem" alt="GitHub"><i class="bi bi-github icon-style"></i></a>
-                <a target="_blank" href="https://www.linkedin.com/in/allan-dalazem/" alt="LinkedIn"><i class="bi bi-linkedin icon-style"></i></a>
+        <section id="stack" class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Stack & Competências</span>
+                <h2>Ecossistema Técnico de Engenharia</h2>
             </div>
             
-        </footer>
+            <div class="stack-grid">
+                <div class="stack-category">
+                    <h3>Core Languages</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag"><i class="bi bi-code-square"></i> C++</span>
+                        <span class="tech-tag"><i class="bi bi-code-slash"></i> C#</span>
+                        <span class="tech-tag">C</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">SQL</span>
+                    </div>
+                </div>
 
-        <script src="javascript/script.js"></script>
-    </body>
+                <div class="stack-category">
+                    <h3>Data & Architecture</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">REST APIs</span>
+                        <span class="tech-tag">Data Structures</span>
+                        <span class="tech-tag">OOP</span>
+                        <span class="tech-tag">Relational Modeling</span>
+                    </div>
+                </div>
+
+                <div class="stack-category">
+                    <h3>DevOps & Tools</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag"><i class="bi bi-github"></i> Git / GitHub</span>
+                        <span class="tech-tag">Docker (Estudos)</span>
+                        <span class="tech-tag">Linux Fundamentals</span>
+                        <span class="tech-tag">Unity Engine</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section-container projects-carousel-section">
+            <div class="carousel-container-wrapper">
+                
+                <div class="section-header">
+                    <span class="section-tag">Showcase / Portfolio</span>
+                    <h2>Sistemas & Engenharia em Código</h2>
+                </div>
+
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carouselTrack">
+                        
+                        <!-- Air-Sea Battle (Atualizado para abrir em nova guia e com imagem) -->
+                        <div class="project-slide-card" onclick="window.open('../Air-SeaBattle_Project/index.html', '_blank')" style="cursor: pointer;">
+                            <div class="project-card-image-box">
+                                <div class="project-image-overlay"></div>
+                                <img src="images/air-seabattle.png" alt="Air-Sea Battle">
+                                <div class="project-image-placeholder"><i class="bi bi-joystick"></i></div>
+                            </div>
+                            <div class="project-card-body">
+                                <span class="project-meta-type">Retro Arcade / Atari</span>
+                                <h3>Air-Sea Battle</h3>
+                                <p class="project-card-desc">Jogo clássico inspirado no título original lançado para Atari, desafiando o jogador em combates táticos aéreos e marítimos em tempo real.</p>
+                                <div class="project-card-techs">
+                                    <span>JavaScript</span>
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <span class="btn-project-link">Jogar Agora <i class="bi bi-arrow-up-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-slide-card">
+                            <div class="project-card-image-box">
+                                <div class="project-image-overlay"></div>
+                                <img src="images/2d_movement.png" alt="Simulador U = R · i">
+                                <div class="project-image-placeholder"><i class="bi bi-cpu"></i></div>
+                            </div>
+                            <div class="project-card-body">
+                                <span class="project-meta-type">Technical Capstone</span>
+                                <h3>2D Movement</h3>
+                                <p class="project-card-desc">Este projeto consiste em um jogo 2D de plataforma, no qual o objetivo é coletar o máximo de frutas e chegar ao final da fase.</p>
+                                <div class="project-card-techs">
+                                    <span>C#</span>
+                                    <span>Unity 2D</span>
+                                    <span>Physics Math</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a href="#" class="btn-project-link">Source Code <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-slide-card">
+                            <div class="project-card-image-box">
+                                <div class="project-image-overlay"></div>
+                                <img src="images/the_last_of_cheese.png" alt="The Last Of Cheese Simulation">
+                                <div class="project-image-placeholder"><i class="bi bi-diagram-3"></i></div>
+                            </div>
+                            <div class="project-card-body">
+                                <span class="project-meta-type">Simulation System</span>
+                                <h3>The Last Of Cheese</h3>
+                                <p class="project-card-desc">Ambiente de simulação inteligente baseado em máquinas de estado finito (FSM) complexas para comportamento e tomada de decisão de agentes autônomos (Rato).</p>
+                                <div class="project-card-techs">
+                                    <span>C#</span>
+                                    <span>Unity Engine</span>
+                                    <span>State Machines</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a href="#" class="btn-project-link">Source Code <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-slide-card">
+                            <div class="project-card-image-box">
+                                <div class="project-image-overlay"></div>
+                                <img src="images/maze_game.png" alt="The Maze Game CLI">
+                                <div class="project-image-placeholder"><i class="bi bi-terminal"></i></div>
+                            </div>
+                            <div class="project-card-body">
+                                <span class="project-meta-type">Low-Level CLI Application</span>
+                                <h3>The Maze Game</h3>
+                                <p class="project-card-desc">Engine de labirinto gerada via console com otimização estrutural de renderização de matrizes bidimensionais e processamento em tempo real em baixo nível.</p>
+                                <div class="project-card-techs">
+                                    <span>C++</span>
+                                    <span>Memory Management</span>
+                                    <span>Algorithms</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a href="#" class="btn-project-link">Source Code <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-slide-card">
+                            <div class="project-card-image-box">
+                                <div class="project-image-overlay"></div>
+                                <img src="images/gunbound.png" alt="GunBound Ballistics Simulation">
+                                <div class="project-image-placeholder"><i class="bi bi-activity"></i></div>
+                            </div>
+                            <div class="project-card-body">
+                                <span class="project-meta-type">Physics Simulation</span>
+                                <h3>GunBound Remake</h3>
+                                <p class="project-card-desc">Reconstrução lógica das mecânicas balísticas clássicas de trajetória parabólica com base em equações vetoriais de vento, gravidade e colisão algorítmica.</p>
+                                <div class="project-card-techs">
+                                    <span>C++</span>
+                                    <span>Applied Physics</span>
+                                    <span>Vector Math</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a href="#" class="btn-project-link">Source Code <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-slide-card">
+                            <div class="project-card-image-box">
+                                <div class="project-image-overlay"></div>
+                                <img src="images/datilogarfo_hero.png" alt="Datilografo Hero">
+                                <div class="project-image-placeholder"><i class="bi bi-keyboard"></i></div>
+                            </div>
+                            <div class="project-card-body">
+                                <span class="project-meta-type">Event-Driven System</span>
+                                <h3>Datilógrafo Hero</h3>
+                                <p class="project-card-desc">Engine orientada a eventos síncronos e assíncronos para captura e validação de buffers de entrada em tempo real, calculando precisão harmônica de digitação.</p>
+                                <div class="project-card-techs">
+                                    <span>C#</span>
+                                    <span>Event Architecture</span>
+                                    <span>Real-time Inputs</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a href="#" class="btn-project-link">Source Code <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-slide-card">
+                            <div class="project-card-image-box">
+                                <div class="project-image-overlay"></div>
+                                <img src="images/snake_game.png" alt="Snake Game Core">
+                                <div class="project-image-placeholder"><i class="bi bi-grid-3x3"></i></div>
+                            </div>
+                            <div class="project-card-body">
+                                <span class="project-meta-type">Data Structures</span>
+                                <h3>Snake Grid Core</h3>
+                                <p class="project-card-desc">Desenvolvimento algorítmico estruturado focado no gerenciamento de coordenadas dinâmicas em filas de memória linear e controle lógico estável de colisões de nós.</p>
+                                <div class="project-card-techs">
+                                    <span>C++</span>
+                                    <span>Data Structures</span>
+                                    <span>Memory Arrays</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a href="#" class="btn-project-link">Source Code <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-slide-card">
+                            <div class="project-card-image-box">
+                                <div class="project-image-overlay"></div>
+                                <img src="images/escaperoom.png" alt="Escape Room Project">
+                                <div class="project-image-placeholder"><i class="bi bi-door-closed"></i></div>
+                            </div>
+                            <div class="project-card-body">
+                                <span class="project-meta-type">Logic Puzzle Environment</span>
+                                <h3>Escape Room Core</h3>
+                                <p class="project-card-desc">Ambiente imersivo projetado com encadeamento de puzzles lógicos de validação sequencial e gerenciamento estrito de inventário de ponteiros de dados.</p>
+                                <div class="project-card-techs">
+                                    <span>C#</span>
+                                    <span>Unity Architecture</span>
+                                    <span>Game Logic</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a href="#" class="btn-project-link">Source Code <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-slide-card">
+                            <div class="project-card-image-box">
+                                <div class="project-image-overlay"></div>
+                                <img src="images/aim_labs.png" alt="Aim Labs Sandbox">
+                                <div class="project-image-placeholder"><i class="bi bi-crosshair"></i></div>
+                            </div>
+                            <div class="project-card-body">
+                                <span class="project-meta-type">Performance Sandbox</span>
+                                <h3>Aim Labs Reflex Trainer</h3>
+                                <p class="project-card-desc">Sistema de treino balístico com geração randômica procedural de alvos e cálculo em tempo de execução de tempo de resposta, precisão em pixels e métricas vetoriais.</p>
+                                <div class="project-card-techs">
+                                    <span>C#</span>
+                                    <span>Vector System</span>
+                                    <span>Procedural Spawning</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a href="#" class="btn-project-link">Source Code <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-slide-card">
+                            <div class="project-card-image-box">
+                                <div class="project-image-overlay"></div>
+                                <img src="images/tcc.png" alt="TCC Project Framework">
+                                <div class="project-image-placeholder"><i class="bi bi-award"></i></div>
+                            </div>
+                            <div class="project-card-body">
+                                <span class="project-meta-type">Graduation Capstone</span>
+                                <h3>TCC / U = R · i </h3>
+                                <p class="project-card-desc">Engine de simulação lógica e física elétrica aplicada para fins educacionais. Desenvolvido com estrito gerenciamento de estados em circuitos orientados a objetos.</p>
+                                <div class="project-card-techs">
+                                    <span>C++ / C#</span>
+                                    <span>Systems Architecture</span>
+                                    <span>Full Design Docs</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a href="#" class="btn-project-link">Source Code <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="carousel-controls-container">
+                    <button class="ctrl-btn prev-btn" id="carouselPrevBtn" aria-label="Slide Anterior">
+                        <i class="bi bi-arrow-left"></i>
+                    </button>
+                    <button class="ctrl-btn next-btn" id="carouselNextBtn" aria-label="Próximo Slide">
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Timeline</span>
+                <h2>Formação & Especializações</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023 — 2026</div>
+                    <div class="timeline-content">
+                        <h3>Ensino Médio Integrado: Técnico em Programação de Jogos Digitais</h3>
+                        <p class="timeline-institution">IFPR - Instituto Federal do Paraná (Campus Curitiba)</p>
+                        <p class="timeline-desc">Foco profundo em ciência da computação, lógica matemática, estruturas de dados, álgebra linear aplicada e desenvolvimento procedural e orientado a objetos.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Set — Dez 2025</div>
+                    <div class="timeline-content">
+                        <h3>Especialização Profissional em Análise de Dados</h3>
+                        <p class="timeline-institution">Tech.Já / JA Paraná via Coursera</p>
+                        <p class="timeline-desc">Manipulação de dados estruturados, modelagem preditiva, extração de métricas com foco em tomadas de decisões críticas corporativas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="premium-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="logo">AD<span class="dot">.</span></span>
+                <p>Architecting next-generation backend infrastructures.</p>
+            </div>
+            <div class="footer-socials">
+                <a target="_blank" href="https://github.com/allan-dalazem" title="GitHub"><i class="bi bi-github"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/allan-dalazem/" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Allan Dalazem. All rights reserved. Handcrafted with modern engineering principles.</p>
+        </div>
+    </footer>
+
+    <script src="javascript/script.js"></script>
+</body>
 </html>
